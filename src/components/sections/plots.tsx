@@ -4,9 +4,9 @@ import { ScrollReveal } from "./scroll-reveal";
 import { Check, Ruler, TreePine } from "lucide-react";
 
 const plots = [
-  { size: "6 соток", price: "350 000", area: "600 м²", image: "/images/plot-1.png", popular: false },
-  { size: "10 соток", price: "420 000", area: "1000 м²", image: "/images/plot-2.png", popular: true },
-  { size: "12 соток", price: "490 000", area: "1200 м²", image: "/images/plot-3.png", popular: false },
+  { size: "6 соток", price: "350 000", area: "600 м²", image: "/images/plot-1.jpg", popular: false },
+  { size: "10 соток", price: "420 000", area: "1000 м²", image: "/images/plot-2.jpg", popular: true },
+  { size: "12 соток", price: "490 000", area: "1200 м²", image: "/images/plot-3.jpg", popular: false },
 ];
 
 const benefits = ["Без скрытых платежей", "Официальный договор", "Помощь с документами", "Электричество на участке", "Круглогодичный подъезд"];
@@ -16,11 +16,11 @@ export function Plots() {
     <section id="plots" className="relative overflow-hidden bg-forest-900 py-20 noise-overlay sm:py-28">
       {/* Background photo */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
-        style={{ backgroundImage: "url('https://sfile.chatglm.cn/images-ppt/ed83bdcaeed4.jpg')" }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
+        style={{ backgroundImage: "url('https://sfile.chatglm.cn/images-ppt/8230861c67c5.jpeg')" }}
       />
       {/* Dark overlay on top of photo */}
-      <div className="absolute inset-0 bg-forest-900/70" />
+      <div className="absolute inset-0 bg-forest-900/50" />
 
       {/* Background decorations */}
       <div className="absolute inset-0 bg-leaves-pattern" />

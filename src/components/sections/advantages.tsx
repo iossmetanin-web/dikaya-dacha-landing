@@ -41,11 +41,11 @@ export function Advantages() {
     <section id="advantages" className="relative overflow-hidden bg-cream py-20 sm:py-28">
       {/* Background photo */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-35"
-        style={{ backgroundImage: "url('https://sfile.chatglm.cn/images-ppt/c137c4eb5032.jpg')" }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
+        style={{ backgroundImage: "url('https://sfile.chatglm.cn/images-ppt/d428118ccb5f.jpg')" }}
       />
       {/* Cream overlay for readability */}
-      <div className="absolute inset-0 bg-cream/70" />
+      <div className="absolute inset-0 bg-cream/50" />
 
       {/* Background decorations */}
       <div className="absolute inset-0 bg-dots" />

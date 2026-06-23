@@ -8,25 +8,25 @@ const attractions = [
     title: "Новая Линза",
     time: "5 мин на машине",
     description: "Живописное озеро с кристально чистой водой среди сосен",
-    image: "/images/attraction-lake.png",
+    image: "/images/attraction-lake.jpg",
   },
   {
     title: "Старая Линза",
     time: "10 мин на машине",
     description: "Уединённое озеро в лесу — идеальное место для рыбалки",
-    image: "/images/attraction-rocks.png",
+    image: "/images/attraction-rocks.jpg",
   },
   {
     title: "Каменные палатки",
     time: "15 мин на машине",
     description: "Древние скальные формирования — потрясающие виды и маршруты",
-    image: "/images/attraction-rocks.png",
+    image: "/images/attraction-viewpoint.jpg",
   },
   {
     title: "Лесные тропы",
     time: "Прямо от поселка",
     description: "Прогулки по уральскому лесу, сбор грибов и ягод",
-    image: "/images/attraction-forest.png",
+    image: "/images/attraction-forest.jpg",
   },
 ];
 
@@ -35,11 +35,11 @@ export function Attractions() {
     <section id="attractions" className="relative overflow-hidden bg-white py-20 sm:py-28">
       {/* Real photo background — very subtle */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-25"
-        style={{ backgroundImage: "url('https://sfile.chatglm.cn/images-ppt/a950a3ac6ea1.jpg')" }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
+        style={{ backgroundImage: "url('https://sfile.chatglm.cn/images-ppt/4dcb88816541.jpeg')" }}
       />
       {/* White overlay to keep text readable */}
-      <div className="absolute inset-0 bg-white/75" />
+      <div className="absolute inset-0 bg-white/50" />
 
       {/* Background decoration */}
       <div className="absolute inset-0 bg-diagonal" />

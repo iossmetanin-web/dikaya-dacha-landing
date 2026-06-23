@@ -47,10 +47,10 @@ export function Consultation() {
       {/* Background image overlay + decorations */}
       <div className="absolute inset-0 bg-leaves-pattern" />
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-25"
-        style={{ backgroundImage: "url('https://sfile.chatglm.cn/images-ppt/937e4aa9eba2.jpg')" }}
+        className="absolute inset-0 bg-cover bg-center opacity-50"
+        style={{ backgroundImage: "url('https://sfile.chatglm.cn/images-ppt/18ea4fa5a6ca.jpeg')" }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-forest-900 via-forest-900/90 to-forest-900" />
+      <div className="absolute inset-0 bg-gradient-to-b from-forest-900 via-forest-900/60 to-forest-900" />
       <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-forest-400/5 blur-[120px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

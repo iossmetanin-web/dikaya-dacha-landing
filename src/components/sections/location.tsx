@@ -32,11 +32,11 @@ export function Location() {
     <section id="location" className="relative overflow-hidden bg-forest-900 py-20 noise-overlay sm:py-28">
       {/* Real photo background */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
-        style={{ backgroundImage: "url('https://sfile.chatglm.cn/images-ppt/ced60ca3ed33.jpg')" }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
+        style={{ backgroundImage: "url('https://sfile.chatglm.cn/images-ppt/7839ae09bfc4.jpg')" }}
       />
       {/* Dark overlay for readability */}
-      <div className="absolute inset-0 bg-forest-900/70" />
+      <div className="absolute inset-0 bg-forest-900/50" />
 
       {/* Background decorations for dark section */}
       <div className="absolute inset-0 bg-leaves-pattern" />

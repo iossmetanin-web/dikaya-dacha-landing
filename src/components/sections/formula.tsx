@@ -8,10 +8,10 @@ export function Formula() {
     <section className="relative overflow-hidden bg-forest-950 py-20 noise-overlay sm:py-28">
       {/* Real photo background */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
-        style={{ backgroundImage: "url('https://sfile.chatglm.cn/images-ppt/e9340f28d423.jpg')" }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
+        style={{ backgroundImage: "url('https://sfile.chatglm.cn/images-ppt/b3e2f14e4dd6.jpg')" }}
       />
-      <div className="absolute inset-0 bg-forest-950/70" />
+      <div className="absolute inset-0 bg-forest-950/50" />
 
       {/* Background decorations */}
       <div className="absolute inset-0 bg-leaves-pattern" />
@@ -36,7 +36,7 @@ export function Formula() {
             <div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-center sm:gap-4 lg:gap-6">
               <div className="glass-card w-full rounded-2xl p-6 text-center transition-all hover:bg-white/10 sm:w-48 sm:p-8">
                 <div className="mx-auto mb-3 h-16 w-16 overflow-hidden rounded-xl">
-                  <div className="h-full w-full bg-cover bg-center" style={{ backgroundImage: "url('/images/plot-2.png')" }} />
+                  <div className="h-full w-full bg-cover bg-center" style={{ backgroundImage: "url('/images/plot-2.jpg')" }} />
                 </div>
                 <p className="text-sm font-medium text-white/60">Участок</p>
                 <p className="mt-1 text-xl text-forest-300 sm:text-2xl" style={{ fontFamily: "var(--font-heading)", fontWeight: 700 }}>350 000 ₽</p>
@@ -48,7 +48,7 @@ export function Formula() {
 
               <div className="glass-card w-full rounded-2xl p-6 text-center transition-all hover:bg-white/10 sm:w-48 sm:p-8">
                 <div className="mx-auto mb-3 h-16 w-16 overflow-hidden rounded-xl">
-                  <div className="h-full w-full bg-cover bg-center" style={{ backgroundImage: "url('/images/house-1.png')" }} />
+                  <div className="h-full w-full bg-cover bg-center" style={{ backgroundImage: "url('/images/house-1.jpg')" }} />
                 </div>
                 <p className="text-sm font-medium text-white/60">Дом 25 м²</p>
                 <p className="mt-1 text-xl text-forest-300 sm:text-2xl" style={{ fontFamily: "var(--font-heading)", fontWeight: 700 }}>1 250 000 ₽</p>

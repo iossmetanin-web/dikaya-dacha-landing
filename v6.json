@@ -1,0 +1,28 @@
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "SEASON: [summer], WATERMARK: [yes]",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1782245106,
+  "id": "202606240405038f47962dfda342cf",
+  "model": "glm-4.6v",
+  "object": "chat.completion",
+  "request_id": "202606240405038f47962dfda342cf",
+  "usage": {
+    "completion_tokens": 15,
+    "completion_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "prompt_tokens": 2366,
+    "prompt_tokens_details": {
+      "cached_tokens": 4
+    },
+    "total_tokens": 2381
+  }
+}

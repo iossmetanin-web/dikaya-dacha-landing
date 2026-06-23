@@ -4,9 +4,9 @@ import { ScrollReveal } from "./scroll-reveal";
 import { Maximize2, Thermometer, Zap, Truck } from "lucide-react";
 
 const houses = [
-  { title: "Компактный", size: "25 м²", price: "1 250 000", description: "Идеальный вариант для одного или пары. Всё необходимое в компактном пространстве.", image: "/images/house-1.png", features: ["Спальня", "Кухня-гостиная", "Санузел", "Терраса"] },
-  { title: "Семейный", size: "36 м²", price: "1 550 000", description: "Просторный дом для семьи. Отдельная спальня и просторная гостиная.", image: "/images/house-2.png", features: ["2 спальни", "Кухня-гостиная", "Санузел", "Терраса"], popular: true },
-  { title: "Просторный", size: "50 м²", price: "1 950 000", description: "Максимальный комфорт на природе. Двухуровневый дом с мансардой.", image: "/images/house-3.png", features: ["2 спальни", "Гостиная", "Кухня", "2 террасы"] },
+  { title: "Компактный", size: "25 м²", price: "1 250 000", description: "Идеальный вариант для одного или пары. Всё необходимое в компактном пространстве.", image: "/images/house-1.jpg", features: ["Спальня", "Кухня-гостиная", "Санузел", "Терраса"] },
+  { title: "Семейный", size: "36 м²", price: "1 550 000", description: "Просторный дом для семьи. Отдельная спальня и просторная гостиная.", image: "/images/house-2.jpg", features: ["2 спальни", "Кухня-гостиная", "Санузел", "Терраса"], popular: true },
+  { title: "Просторный", size: "50 м²", price: "1 950 000", description: "Максимальный комфорт на природе. Двухуровневый дом с мансардой.", image: "/images/house-3.jpg", features: ["2 спальни", "Гостиная", "Кухня", "2 террасы"] },
 ];
 
 const specs = [
@@ -21,11 +21,11 @@ export function Houses() {
     <section id="houses" className="relative overflow-hidden bg-cream py-20 sm:py-28">
       {/* Real photo background */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-25"
-        style={{ backgroundImage: "url('https://sfile.chatglm.cn/images-ppt/da1941465fe5.jpg')" }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
+        style={{ backgroundImage: "url('https://sfile.chatglm.cn/images-ppt/a1e462041900.jpg')" }}
       />
       {/* Cream overlay on top of the photo */}
-      <div className="absolute inset-0 bg-cream/75" />
+      <div className="absolute inset-0 bg-cream/50" />
 
       {/* Background decoration */}
       <div className="absolute inset-0 bg-dots" />
