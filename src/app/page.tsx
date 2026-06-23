@@ -1,31 +1,31 @@
-'use client'
+"use client";
+
+import { Header } from "@/components/sections/header";
+import { Hero } from "@/components/sections/hero";
+import { Advantages } from "@/components/sections/advantages";
+import { Location } from "@/components/sections/location";
+import { Attractions } from "@/components/sections/attractions";
+import { Plots } from "@/components/sections/plots";
+import { Houses } from "@/components/sections/houses";
+import { Formula } from "@/components/sections/formula";
+import { Consultation } from "@/components/sections/consultation";
+import { Footer } from "@/components/sections/footer";
+import { BackToTop } from "@/components/sections/back-to-top";
 
 export default function Home() {
   return (
-    <div style={{
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      minHeight: '100vh',
-      gap: '2rem',
-      padding: '1rem'
-    }}>
-      <div style={{
-        position: 'relative',
-        width: '6rem',
-        height: '6rem'
-      }}>
-        <img
-          src="/logo.svg"
-          alt="Z.ai Logo"
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'contain'
-          }}
-        />
-      </div>
-    </div>
-  )
+    <main className="min-h-screen">
+      <Header />
+      <Hero />
+      <Advantages />
+      <Location />
+      <Attractions />
+      <Plots />
+      <Houses />
+      <Formula />
+      <Consultation />
+      <Footer />
+      <BackToTop />
+    </main>
+  );
 }
