@@ -19,6 +19,14 @@ const specs = [
 export function Houses() {
   return (
     <section id="houses" className="relative overflow-hidden bg-cream py-20 sm:py-28">
+      {/* Real photo background */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-25"
+        style={{ backgroundImage: "url('https://sfile.chatglm.cn/images-ppt/da1941465fe5.jpg')" }}
+      />
+      {/* Cream overlay on top of the photo */}
+      <div className="absolute inset-0 bg-cream/75" />
+
       {/* Background decoration */}
       <div className="absolute inset-0 bg-dots" />
       <div className="bg-blob absolute -bottom-20 right-[10%] h-96 w-96 bg-forest-200" />
@@ -27,9 +35,9 @@ export function Houses() {
       <div className="absolute bottom-20 left-[15%] h-24 w-24 rounded-full border border-forest-200/40" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <ScrollReveal>
+        <ScrollReveal variant="fade">
           <div className="mb-14 text-center sm:mb-16">
-            <p className="mb-3 text-sm font-medium uppercase tracking-[0.3em] text-forest-600" style={{ fontFamily: "var(--font-body)" }}>
+            <p className="mb-3 text-sm font-medium uppercase tracking-[0.3em] text-forest-600">
               Дома
             </p>
             <h2 className="text-3xl text-forest-950 sm:text-4xl lg:text-5xl">Дома из контейнеров под заказ</h2>
@@ -52,11 +60,11 @@ export function Houses() {
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
           {houses.map((house, i) => (
-            <ScrollReveal key={house.title} delay={i * 0.15}>
+            <ScrollReveal key={house.title} variant="scale" delay={i * 0.15}>
               <div className={`group relative h-full overflow-hidden rounded-3xl bg-white transition-all duration-500 hover:shadow-2xl hover:shadow-forest-900/8 ${house.popular ? "ring-2 ring-forest-400" : "border border-forest-100"}`}>
                 {house.popular && (
                   <div className="absolute top-4 left-4 z-20 rounded-full bg-forest-600 px-3 py-1">
-                    <span className="text-xs font-semibold text-white" style={{ fontFamily: "var(--font-body)" }}>ХИТ</span>
+                    <span className="text-xs font-semibold text-white">ХИТ</span>
                   </div>
                 )}
                 <div className="relative h-52 overflow-hidden sm:h-60">

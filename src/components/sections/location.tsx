@@ -30,18 +30,23 @@ const routes = [
 export function Location() {
   return (
     <section id="location" className="relative overflow-hidden bg-forest-900 py-20 noise-overlay sm:py-28">
+      {/* Real photo background */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+        style={{ backgroundImage: "url('https://sfile.chatglm.cn/images-ppt/ced60ca3ed33.jpg')" }}
+      />
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 bg-forest-900/70" />
+
       {/* Background decorations for dark section */}
       <div className="absolute inset-0 bg-leaves-pattern" />
       <div className="absolute top-0 left-0 h-48 w-48 rounded-full bg-forest-400/5 blur-[80px]" />
       <div className="absolute bottom-0 right-0 h-64 w-64 rounded-full bg-forest-500/5 blur-[100px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <ScrollReveal>
+        <ScrollReveal variant="blur">
           <div className="mb-14 text-center sm:mb-16">
-            <p
-              className="mb-3 text-sm font-medium uppercase tracking-[0.3em] text-forest-300"
-              style={{ fontFamily: "var(--font-body)" }}
-            >
+            <p className="mb-3 text-sm font-medium uppercase tracking-[0.3em] text-forest-300">
               Расположение
             </p>
             <h2
@@ -57,7 +62,7 @@ export function Location() {
         {/* Route cards */}
         <div className="mb-14 grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-6">
           {routes.map((route, i) => (
-            <ScrollReveal key={route.title} delay={i * 0.15}>
+            <ScrollReveal key={route.title} variant="slide-left" delay={i * 0.15}>
               <div className="glass-card rounded-2xl p-6 text-center transition-all duration-300 hover:bg-white/10 sm:p-8">
                 <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-forest-400/20 text-forest-300">
                   <route.icon className="h-7 w-7" />
@@ -95,9 +100,7 @@ export function Location() {
                 <div className="h-24 w-px bg-gradient-to-b from-forest-400 to-forest-600" />
                 <div className="h-px w-px bg-forest-600/30" />
                 <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-forest-400 bg-forest-900 text-forest-300">
-                  <span className="text-[10px] font-semibold" style={{ fontFamily: "var(--font-body)" }}>
-                    СНТ
-                  </span>
+                  <span className="text-[10px] font-semibold">СНТ</span>
                 </div>
               </div>
 

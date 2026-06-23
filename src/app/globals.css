@@ -71,12 +71,18 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-body), system-ui, sans-serif;
+    font-family: var(--font-body), Georgia, serif;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.8;
+  }
+  p, span, a, li, label, input, textarea, button, td, th {
+    font-family: var(--font-body), Georgia, serif;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading), Georgia, serif;
     font-weight: 600;
-    letter-spacing: -0.01em;
+    letter-spacing: 0.03em;
   }
 }
 

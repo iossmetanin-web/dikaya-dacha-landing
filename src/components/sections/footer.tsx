@@ -11,7 +11,7 @@ const footerFeatures = [
 
 export function Footer() {
   return (
-    <footer className="relative bg-forest-950 pt-16 pb-6 noise-overlay">
+    <footer className="relative mt-auto bg-forest-950 pt-16 pb-6 noise-overlay">
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Main footer content */}
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 sm:gap-8">
@@ -43,10 +43,7 @@ export function Footer() {
 
           {/* Features */}
           <div>
-            <h4
-              className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-white/50"
-              style={{ fontFamily: "var(--font-body)" }}
-            >
+            <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-white/50">
               Преимущества
             </h4>
             <ul className="space-y-3">
@@ -61,10 +58,7 @@ export function Footer() {
 
           {/* Navigation */}
           <div>
-            <h4
-              className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-white/50"
-              style={{ fontFamily: "var(--font-body)" }}
-            >
+            <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-white/50">
               Навигация
             </h4>
             <ul className="space-y-2.5">
@@ -95,10 +89,7 @@ export function Footer() {
 
           {/* Contacts */}
           <div>
-            <h4
-              className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-white/50"
-              style={{ fontFamily: "var(--font-body)" }}
-            >
+            <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-white/50">
               Контакты
             </h4>
             <ul className="space-y-3">

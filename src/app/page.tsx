@@ -14,7 +14,7 @@ import { BackToTop } from "@/components/sections/back-to-top";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="flex min-h-screen flex-col">
       <Header />
       <Hero />
       <Advantages />

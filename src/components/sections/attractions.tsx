@@ -33,6 +33,14 @@ const attractions = [
 export function Attractions() {
   return (
     <section id="attractions" className="relative overflow-hidden bg-white py-20 sm:py-28">
+      {/* Real photo background — very subtle */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-25"
+        style={{ backgroundImage: "url('https://sfile.chatglm.cn/images-ppt/a950a3ac6ea1.jpg')" }}
+      />
+      {/* White overlay to keep text readable */}
+      <div className="absolute inset-0 bg-white/75" />
+
       {/* Background decoration */}
       <div className="absolute inset-0 bg-diagonal" />
       <div className="bg-blob absolute top-1/4 -left-20 h-80 w-80 bg-forest-100" />
@@ -41,12 +49,9 @@ export function Attractions() {
       <div className="absolute top-20 right-[10%] h-32 w-32 rounded-full border border-forest-100/60" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <ScrollReveal>
+        <ScrollReveal variant="fade">
           <div className="mb-14 text-center sm:mb-16">
-            <p
-              className="mb-3 text-sm font-medium uppercase tracking-[0.3em] text-forest-600"
-              style={{ fontFamily: "var(--font-body)" }}
-            >
+            <p className="mb-3 text-sm font-medium uppercase tracking-[0.3em] text-forest-600">
               Природа рядом
             </p>
             <h2 className="text-3xl text-forest-950 sm:text-4xl lg:text-5xl">

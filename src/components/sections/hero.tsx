@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { Trees, Home, MapPin, ChevronDown } from "lucide-react";
+import { Trees, Home, MapPin } from "lucide-react";
 import { ScrollReveal } from "./scroll-reveal";
 
 function CountUp({ target, suffix = "", prefix = "" }: { target: number; suffix?: string; prefix?: string }) {
@@ -84,10 +84,7 @@ export function Hero() {
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4 pt-20 text-center sm:px-6">
         <div className="mx-auto max-w-4xl">
           <ScrollReveal delay={0.2} direction="none" duration={0.8}>
-            <p
-              className="mb-4 text-sm font-medium uppercase tracking-[0.35em] text-forest-300 sm:text-base"
-              style={{ fontFamily: "var(--font-body)" }}
-            >
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.35em] text-forest-300 sm:text-base">
               52 км от Екатеринбурга
             </p>
           </ScrollReveal>
@@ -123,7 +120,7 @@ export function Hero() {
                   className="glass-card rounded-2xl px-4 py-5 sm:px-6"
                 >
                   <stat.icon className={`mx-auto mb-2 h-6 w-6 ${stat.color}`} />
-                  <p className="text-xs font-medium tracking-wide text-white/50 uppercase sm:text-sm" style={{ fontFamily: "var(--font-body)" }}>
+                  <p className="text-xs font-medium tracking-wide text-white/50 uppercase sm:text-sm">
                     {stat.label}
                   </p>
                   <p
@@ -145,7 +142,6 @@ export function Hero() {
                   document.querySelector("#plots")?.scrollIntoView({ behavior: "smooth" });
                 }}
                 className="glow-green rounded-2xl bg-forest-400 px-8 py-4 text-base font-semibold text-forest-950 transition-all hover:bg-forest-300 hover:shadow-xl hover:shadow-forest-400/20 active:scale-[0.98] sm:text-lg"
-                style={{ fontFamily: "var(--font-body)" }}
               >
                 Выбрать участок
               </button>
@@ -154,7 +150,6 @@ export function Hero() {
                   document.querySelector("#contacts")?.scrollIntoView({ behavior: "smooth" });
                 }}
                 className="rounded-2xl border-2 border-white/30 bg-white/10 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all hover:border-white/50 hover:bg-white/20 active:scale-[0.98] sm:text-lg"
-                style={{ fontFamily: "var(--font-body)" }}
               >
                 Получить консультацию
               </button>
@@ -162,17 +157,33 @@ export function Hero() {
           </ScrollReveal>
         </div>
 
-        {/* Scroll indicator — pulsing chevron, mobile-friendly */}
+        {/* Scroll indicator — three pulsing lines, wave upward */}
         <motion.div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-          animate={{ y: [0, 10, 0], opacity: [0.6, 1, 0.6] }}
-          transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5"
+          initial="hidden"
+          animate="visible"
         >
+          <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-white/40 mb-1">
+            Листайте
+          </span>
           <div className="flex flex-col items-center gap-1">
-            <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-white/40" style={{ fontFamily: "var(--font-body)" }}>
-              Листайте
-            </span>
-            <ChevronDown className="h-5 w-5 text-forest-300/70" />
+            {[0, 1, 2].map((i) => (
+              <motion.div
+                key={i}
+                className="h-[2px] w-3 rounded-full bg-forest-300/70"
+                initial={{ opacity: 0.2, y: 4 }}
+                animate={{
+                  opacity: [0.2, 0.9, 0.2],
+                  y: [4, -4, 4],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: i * 0.25,
+                }}
+              />
+            ))}
           </div>
         </motion.div>
       </div>

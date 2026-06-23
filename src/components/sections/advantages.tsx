@@ -39,6 +39,14 @@ const advantages = [
 export function Advantages() {
   return (
     <section id="advantages" className="relative overflow-hidden bg-cream py-20 sm:py-28">
+      {/* Background photo */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-35"
+        style={{ backgroundImage: "url('https://sfile.chatglm.cn/images-ppt/c137c4eb5032.jpg')" }}
+      />
+      {/* Cream overlay for readability */}
+      <div className="absolute inset-0 bg-cream/70" />
+
       {/* Background decorations */}
       <div className="absolute inset-0 bg-dots" />
       <div className="bg-blob absolute -top-10 right-[5%] h-96 w-96 bg-forest-300" />
@@ -52,12 +60,9 @@ export function Advantages() {
       <div className="deco-line absolute top-20 right-[20%]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <ScrollReveal>
+        <ScrollReveal variant="scale">
           <div className="mb-14 text-center sm:mb-16">
-            <p
-              className="mb-3 text-sm font-medium uppercase tracking-[0.3em] text-forest-600"
-              style={{ fontFamily: "var(--font-body)" }}
-            >
+            <p className="mb-3 text-sm font-medium uppercase tracking-[0.3em] text-forest-600">
               Преимущества
             </p>
             <h2
@@ -71,7 +76,7 @@ export function Advantages() {
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6">
           {advantages.map((item, i) => (
-            <ScrollReveal key={item.title} delay={i * 0.1}>
+            <ScrollReveal key={item.title} variant="fade" delay={i * 0.1}>
               <div className="group relative h-full overflow-hidden rounded-2xl border border-forest-100 bg-white p-6 transition-all duration-300 hover:border-forest-200 hover:shadow-xl hover:shadow-forest-900/5 sm:p-8">
                 {/* Hover background glow */}
                 <div className="absolute -right-8 -bottom-8 h-32 w-32 rounded-full bg-forest-50 opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100" />

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+import { Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 
@@ -10,10 +10,10 @@ const cormorant = Cormorant_Garamond({
   display: "swap",
 });
 
-const dmSans = DM_Sans({
+const cormorantBody = Cormorant_Garamond({
   variable: "--font-body",
   subsets: ["latin", "cyrillic"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600"],
   display: "swap",
 });
 
@@ -49,7 +49,8 @@ export default function RootLayout({
   return (
     <html lang="ru" suppressHydrationWarning>
       <body
-        className={`${cormorant.variable} ${dmSans.variable} antialiased`}
+        className={`${cormorant.variable} ${cormorantBody.variable} antialiased`}
+      style={{ fontFamily: "var(--font-body), Georgia, serif" }}
       >
         {children}
         <Toaster />

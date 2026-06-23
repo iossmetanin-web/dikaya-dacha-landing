@@ -52,4 +52,31 @@ Stage Summary:
 - Добавить секцию «О поселке» для большей информативности
 - Добавить галерею с lightbox
 - Добавить плавающий виджет WhatsApp/Telegram
-- Форма консультации пока сохраняет только в console.log — нужен реальный получатель
+- Форма консультации пока сохраняет только в console.log — нужен реальный получатель---
+Task ID: 1
+Agent: Main Agent
+Task: Fix 3 user complaints: (1) ALL fonts template-like, (2) no background images, (3) scroll animations need improvement
+
+Work Log:
+- Replaced DM_Sans with Cormorant Garamond for body text (same family as headings for perfect cohesion)
+- Updated layout.tsx to load Cormorant Garamond twice: once for --font-heading (600/700), once for --font-body (300/400/500/600)
+- Updated globals.css: body font-weight 400, letter-spacing 0.01em, line-height 1.8, Georgia serif fallback
+- Added explicit font-family for p, span, a, li, label, input, textarea, button elements
+- Found 20+ real nature photos via z-ai image-search (pine forest, Ural mountains, lakes, trails, aerial canopy, misty forest)
+- Added background photos to ALL 7 sections: advantages, location, attractions, plots, houses, formula, consultation
+- Each section has: real photo (opacity 25-35%) + color overlay (70-75% opacity) for readability
+- Replaced mouse scroll indicator with 3 animated pulsing lines (wave pattern, mobile-friendly)
+- Enhanced ScrollReveal component with 5 animation variants: fade, slide-left, slide-right, scale, blur
+- Applied different variants to different sections for visual variety
+- Removed all redundant inline fontFamily: "var(--font-body)" styles (now global)
+- Made footer sticky with mt-auto + flex column layout
+- Increased background photo visibility: opacity 20→30-35%, overlay 80-90%→70-75%
+- Verified: browser confirms Cormorant Garamond loaded for all text elements
+- Verified: no console errors, no runtime errors, all pages 200 OK
+
+Stage Summary:
+- Font system: Cormorant Garamond everywhere (headings 600, body 400) — luxury serif cohesive look
+- Background images: 7 real nature photos from sfile.chatglm.cn (pine forest, mountains, lake, trail, aerial, misty)
+- Animations: 5 scroll-reveal variants with elegant easing curves
+- Scroll indicator: replaced mouse with 3 pulsing lines
+- All lint checks pass, no runtime errors

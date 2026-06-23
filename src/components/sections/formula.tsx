@@ -6,14 +6,21 @@ import { Plus } from "lucide-react";
 export function Formula() {
   return (
     <section className="relative overflow-hidden bg-forest-950 py-20 noise-overlay sm:py-28">
+      {/* Real photo background */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+        style={{ backgroundImage: "url('https://sfile.chatglm.cn/images-ppt/e9340f28d423.jpg')" }}
+      />
+      <div className="absolute inset-0 bg-forest-950/70" />
+
       {/* Background decorations */}
       <div className="absolute inset-0 bg-leaves-pattern" />
       <div className="absolute top-1/2 left-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-forest-400/5 blur-[150px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <ScrollReveal>
+        <ScrollReveal variant="blur">
           <div className="mb-14 text-center sm:mb-16">
-            <p className="mb-3 text-sm font-medium uppercase tracking-[0.3em] text-forest-300" style={{ fontFamily: "var(--font-body)" }}>
+            <p className="mb-3 text-sm font-medium uppercase tracking-[0.3em] text-forest-300">
               Ваша дача
             </p>
             <h2 className="text-3xl text-white sm:text-4xl lg:text-5xl">
