@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Unbounded, Nunito_Sans } from "next/font/google";
+import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 
-const unbounded = Unbounded({
+const cormorant = Cormorant_Garamond({
   variable: "--font-heading",
   subsets: ["latin", "cyrillic"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
-const nunitoSans = Nunito_Sans({
+const dmSans = DM_Sans({
   variable: "--font-body",
   subsets: ["latin", "cyrillic"],
   weight: ["300", "400", "500", "600", "700"],
@@ -49,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="ru" suppressHydrationWarning>
       <body
-        className={`${unbounded.variable} ${nunitoSans.variable} antialiased`}
+        className={`${cormorant.variable} ${dmSans.variable} antialiased`}
       >
         {children}
         <Toaster />

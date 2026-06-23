@@ -33,19 +33,23 @@ const attractions = [
 export function Attractions() {
   return (
     <section id="attractions" className="relative overflow-hidden bg-white py-20 sm:py-28">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-diagonal" />
+      <div className="bg-blob absolute top-1/4 -left-20 h-80 w-80 bg-forest-100" />
+      <div className="bg-blob absolute bottom-1/4 -right-10 h-60 w-60 bg-forest-200" />
+      {/* Decorative ring */}
+      <div className="absolute top-20 right-[10%] h-32 w-32 rounded-full border border-forest-100/60" />
+
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <div className="mb-14 text-center sm:mb-16">
             <p
-              className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-forest-600"
-              style={{ fontFamily: "var(--font-heading)" }}
+              className="mb-3 text-sm font-medium uppercase tracking-[0.3em] text-forest-600"
+              style={{ fontFamily: "var(--font-body)" }}
             >
               Природа рядом
             </p>
-            <h2
-              className="text-3xl font-black tracking-tight text-forest-950 sm:text-4xl lg:text-5xl"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
+            <h2 className="text-3xl text-forest-950 sm:text-4xl lg:text-5xl">
               Достопримечательности рядом
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-base text-gray-500 sm:text-lg">
@@ -70,18 +74,20 @@ export function Attractions() {
                   </div>
                 </div>
                 <div className="p-5 sm:p-6">
-                  <h3
-                    className="mb-2 text-lg font-bold text-forest-950"
-                    style={{ fontFamily: "var(--font-heading)" }}
-                  >
-                    {item.title}
-                  </h3>
+                  <h3 className="mb-2 text-lg text-forest-950">{item.title}</h3>
                   <p className="text-sm leading-relaxed text-gray-500">{item.description}</p>
                 </div>
               </div>
             </ScrollReveal>
           ))}
         </div>
+      </div>
+
+      {/* Bottom wave to dark */}
+      <div className="wave-divider">
+        <svg viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,30 C200,5 500,55 700,25 C900,-5 1100,45 1200,20 L1200,60 L0,60 Z" fill="#0f2b1e" />
+        </svg>
       </div>
     </section>
   );

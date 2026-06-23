@@ -44,28 +44,24 @@ export function Consultation() {
       id="contacts"
       className="relative overflow-hidden bg-forest-900 py-20 noise-overlay sm:py-28"
     >
-      {/* Background image overlay */}
+      {/* Background image overlay + decorations */}
+      <div className="absolute inset-0 bg-leaves-pattern" />
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-20"
+        className="absolute inset-0 bg-cover bg-center opacity-15"
         style={{ backgroundImage: "url('/images/form-bg.png')" }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-forest-900 via-forest-900/95 to-forest-900" />
+      <div className="absolute inset-0 bg-gradient-to-b from-forest-900 via-forest-900/90 to-forest-900" />
+      <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-forest-400/5 blur-[120px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left text */}
           <ScrollReveal direction="right">
             <div>
-              <p
-                className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-forest-300"
-                style={{ fontFamily: "var(--font-heading)" }}
-              >
+              <p className="mb-3 text-sm font-medium uppercase tracking-[0.3em] text-forest-300" style={{ fontFamily: "var(--font-body)" }}>
                 Контакты
               </p>
-              <h2
-                className="mb-6 text-3xl font-black tracking-tight text-white sm:text-4xl lg:text-5xl"
-                style={{ fontFamily: "var(--font-heading)" }}
-              >
+              <h2 className="mb-6 text-3xl text-white sm:text-4xl lg:text-5xl">
                 Получите консультацию
                 <br />
                 <span className="text-forest-300">и актуальные цены</span>
@@ -103,10 +99,7 @@ export function Consultation() {
                   <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-forest-400/20">
                     <CheckCircle2 className="h-8 w-8 text-forest-400" />
                   </div>
-                  <h3
-                    className="mb-2 text-xl font-bold text-white"
-                    style={{ fontFamily: "var(--font-heading)" }}
-                  >
+                  <h3 className="mb-2 text-xl text-white">
                     Спасибо!
                   </h3>
                   <p className="text-white/60">

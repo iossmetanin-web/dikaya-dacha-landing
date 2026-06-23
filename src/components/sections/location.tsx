@@ -30,18 +30,23 @@ const routes = [
 export function Location() {
   return (
     <section id="location" className="relative overflow-hidden bg-forest-900 py-20 noise-overlay sm:py-28">
+      {/* Background decorations for dark section */}
+      <div className="absolute inset-0 bg-leaves-pattern" />
+      <div className="absolute top-0 left-0 h-48 w-48 rounded-full bg-forest-400/5 blur-[80px]" />
+      <div className="absolute bottom-0 right-0 h-64 w-64 rounded-full bg-forest-500/5 blur-[100px]" />
+
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <div className="mb-14 text-center sm:mb-16">
             <p
-              className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-forest-300"
-              style={{ fontFamily: "var(--font-heading)" }}
+              className="mb-3 text-sm font-medium uppercase tracking-[0.3em] text-forest-300"
+              style={{ fontFamily: "var(--font-body)" }}
             >
               Расположение
             </p>
             <h2
-              className="text-3xl font-black tracking-tight text-white sm:text-4xl lg:text-5xl"
-              style={{ fontFamily: "var(--font-heading)" }}
+              className="text-3xl text-white sm:text-4xl lg:text-5xl"
+              style={{ fontFamily: "var(--font-heading)", fontWeight: 600 }}
             >
               Всего 52 км
               <br className="hidden sm:block" /> от Екатеринбурга
@@ -58,14 +63,14 @@ export function Location() {
                   <route.icon className="h-7 w-7" />
                 </div>
                 <h3
-                  className="mb-1 text-base font-bold text-white sm:text-lg"
-                  style={{ fontFamily: "var(--font-heading)" }}
+                  className="mb-1 text-base text-white sm:text-lg"
+                  style={{ fontFamily: "var(--font-heading)", fontWeight: 600 }}
                 >
                   {route.title.toUpperCase()}
                 </h3>
                 <p
-                  className="mb-1 text-3xl font-black text-forest-300 sm:text-4xl"
-                  style={{ fontFamily: "var(--font-heading)" }}
+                  className="mb-1 text-3xl text-forest-300 sm:text-4xl"
+                  style={{ fontFamily: "var(--font-heading)", fontWeight: 700 }}
                 >
                   {route.time}
                 </p>
@@ -81,7 +86,6 @@ export function Location() {
         {/* Map visual */}
         <ScrollReveal>
           <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-forest-800/50 p-6 sm:p-10">
-            {/* Decorative route line */}
             <div className="flex items-center gap-3 sm:gap-6">
               <div className="flex flex-col items-center gap-2">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-forest-400 text-forest-950">
@@ -91,10 +95,7 @@ export function Location() {
                 <div className="h-24 w-px bg-gradient-to-b from-forest-400 to-forest-600" />
                 <div className="h-px w-px bg-forest-600/30" />
                 <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-forest-400 bg-forest-900 text-forest-300">
-                  <span
-                    className="text-[10px] font-bold"
-                    style={{ fontFamily: "var(--font-heading)" }}
-                  >
+                  <span className="text-[10px] font-semibold" style={{ fontFamily: "var(--font-body)" }}>
                     СНТ
                   </span>
                 </div>
@@ -103,15 +104,14 @@ export function Location() {
               <div className="flex-1 space-y-6">
                 <div>
                   <p
-                    className="text-lg font-bold text-white sm:text-xl"
-                    style={{ fontFamily: "var(--font-heading)" }}
+                    className="text-lg text-white sm:text-xl"
+                    style={{ fontFamily: "var(--font-heading)", fontWeight: 600 }}
                   >
                     Екатеринбург
                   </p>
                   <p className="text-sm text-white/50">Площадь 1905 года — старт маршрута</p>
                 </div>
 
-                {/* Route path visual */}
                 <div className="relative h-3 overflow-hidden rounded-full bg-forest-800">
                   <div className="absolute inset-y-0 left-0 w-3/4 rounded-full bg-gradient-to-r from-forest-400 via-forest-500 to-forest-600" />
                   <div className="absolute inset-y-0 left-0 w-1/3 animate-pulse rounded-full bg-forest-300/30" />
@@ -119,8 +119,8 @@ export function Location() {
 
                 <div>
                   <p
-                    className="text-lg font-bold text-forest-300 sm:text-xl"
-                    style={{ fontFamily: "var(--font-heading)" }}
+                    className="text-lg text-forest-300 sm:text-xl"
+                    style={{ fontFamily: "var(--font-heading)", fontWeight: 600 }}
                   >
                     СНТ «Протон»
                   </p>
@@ -129,7 +129,6 @@ export function Location() {
               </div>
             </div>
 
-            {/* Coordinates */}
             <div className="mt-8 flex flex-wrap gap-4 border-t border-white/10 pt-6">
               {["Через Асбест", "По трассе Р320", "Свердловская область"].map((tag) => (
                 <span
@@ -142,6 +141,13 @@ export function Location() {
             </div>
           </div>
         </ScrollReveal>
+      </div>
+
+      {/* Bottom wave to white */}
+      <div className="wave-divider">
+        <svg viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,25 C150,55 350,5 600,40 C850,75 1050,15 1200,30 L1200,60 L0,60 Z" fill="#ffffff" />
+        </svg>
       </div>
     </section>
   );

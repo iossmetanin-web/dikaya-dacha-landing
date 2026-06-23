@@ -29,8 +29,8 @@ export function Footer() {
                 <Leaf className="h-5 w-5 text-forest-300" />
               </div>
               <span
-                className="text-base font-bold tracking-wide text-white"
-                style={{ fontFamily: "var(--font-heading)" }}
+                className="text-base tracking-wide text-white"
+                style={{ fontFamily: "var(--font-heading)", fontWeight: 600 }}
               >
                 ДИКАЯ ДАЧА
               </span>
@@ -44,8 +44,8 @@ export function Footer() {
           {/* Features */}
           <div>
             <h4
-              className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-white/50"
-              style={{ fontFamily: "var(--font-heading)" }}
+              className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-white/50"
+              style={{ fontFamily: "var(--font-body)" }}
             >
               Преимущества
             </h4>
@@ -62,8 +62,8 @@ export function Footer() {
           {/* Navigation */}
           <div>
             <h4
-              className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-white/50"
-              style={{ fontFamily: "var(--font-heading)" }}
+              className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-white/50"
+              style={{ fontFamily: "var(--font-body)" }}
             >
               Навигация
             </h4>
@@ -96,8 +96,8 @@ export function Footer() {
           {/* Contacts */}
           <div>
             <h4
-              className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-white/50"
-              style={{ fontFamily: "var(--font-heading)" }}
+              className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-white/50"
+              style={{ fontFamily: "var(--font-body)" }}
             >
               Контакты
             </h4>

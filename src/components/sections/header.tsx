@@ -67,13 +67,10 @@ export function Header() {
             <Leaf className="h-5 w-5 text-forest-300" />
           </div>
           <div className="flex flex-col">
-            <span
-              className="text-sm font-bold leading-tight tracking-wide text-white sm:text-base"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
+            <span className="text-lg leading-tight tracking-wide text-white sm:text-xl" style={{ fontFamily: "var(--font-heading)", fontWeight: 600 }}>
               ДИКАЯ ДАЧА
             </span>
-            <span className="hidden text-[10px] font-light leading-tight text-forest-300 sm:block">
+            <span className="hidden text-[11px] font-normal leading-tight text-forest-300 sm:block" style={{ fontFamily: "var(--font-heading)" }}>
               свежий воздух, спокойствие
             </span>
           </div>

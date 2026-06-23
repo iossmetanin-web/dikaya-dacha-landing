@@ -74,7 +74,9 @@
     font-family: var(--font-body), system-ui, sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading), system-ui, sans-serif;
+    font-family: var(--font-heading), Georgia, serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
   }
 }
 
@@ -107,12 +109,6 @@ html {
 ::selection {
   background: #52b788;
   color: #071a12;
-}
-
-/* Number counter animation */
-@keyframes countUp {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Subtle glow for accent elements */
@@ -152,4 +148,89 @@ html {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   pointer-events: none;
   z-index: 1;
+}
+
+/* =================== */
+/* Background patterns  */
+/* =================== */
+
+/* Organic dot pattern for light sections */
+.bg-dots {
+  background-image: radial-gradient(circle, #2d6a4f 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.12;
+}
+
+/* Leaf vein pattern for dark sections */
+.bg-leaves-pattern {
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 Q40 20 30 55 Q20 20 30 5Z' fill='none' stroke='%2352b788' stroke-width='0.5' opacity='0.15'/%3E%3C/svg%3E");
+  background-size: 60px 60px;
+}
+
+/* Diagonal lines pattern */
+.bg-diagonal {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 20px,
+    rgba(82, 183, 136, 0.03) 20px,
+    rgba(82, 183, 136, 0.03) 21px
+  );
+}
+
+/* Wave section divider */
+.wave-divider {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.wave-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 60px;
+}
+.wave-divider-top {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.wave-divider-top svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 60px;
+  transform: rotate(180deg);
+}
+
+/* Decorative blurred blob */
+.bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* Organic gradient mesh for hero */
+.hero-mesh {
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(45, 106, 79, 0.25) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(82, 183, 136, 0.15) 0%, transparent 40%),
+    radial-gradient(ellipse at 50% 80%, rgba(7, 26, 18, 0.5) 0%, transparent 50%);
+}
+
+/* Floating decorative line */
+.deco-line {
+  position: absolute;
+  width: 1px;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, rgba(82, 183, 136, 0.3), transparent);
 }

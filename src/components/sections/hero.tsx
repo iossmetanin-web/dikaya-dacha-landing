@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { Trees, Home, MapPin } from "lucide-react";
+import { Trees, Home, MapPin, ChevronDown } from "lucide-react";
 import { ScrollReveal } from "./scroll-reveal";
 
 function CountUp({ target, suffix = "", prefix = "" }: { target: number; suffix?: string; prefix?: string }) {
@@ -71,17 +71,22 @@ export function Hero() {
         />
       </div>
 
-      {/* Dark overlays */}
+      {/* Dark overlays + mesh gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-forest-950/60 via-forest-950/30 to-forest-950" />
       <div className="absolute inset-0 bg-gradient-to-r from-forest-950/70 via-transparent to-forest-950/40" />
+      <div className="absolute inset-0 hero-mesh" />
+
+      {/* Decorative elements */}
+      <div className="absolute top-20 right-10 h-72 w-72 rounded-full bg-forest-400/10 blur-[100px] sm:right-20 sm:h-96 sm:w-96" />
+      <div className="absolute bottom-40 left-10 h-60 w-60 rounded-full bg-forest-500/8 blur-[80px] sm:left-20" />
 
       {/* Content */}
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4 pt-20 text-center sm:px-6">
         <div className="mx-auto max-w-4xl">
           <ScrollReveal delay={0.2} direction="none" duration={0.8}>
             <p
-              className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-forest-300 sm:text-base"
-              style={{ fontFamily: "var(--font-heading)" }}
+              className="mb-4 text-sm font-medium uppercase tracking-[0.35em] text-forest-300 sm:text-base"
+              style={{ fontFamily: "var(--font-body)" }}
             >
               52 км от Екатеринбурга
             </p>
@@ -89,8 +94,8 @@ export function Hero() {
 
           <ScrollReveal delay={0.4} direction="none" duration={0.8}>
             <h1
-              className="mb-6 text-4xl font-black leading-[1.05] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl"
-              style={{ fontFamily: "var(--font-heading)" }}
+              className="mb-6 text-5xl leading-[1.0] tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl"
+              style={{ fontFamily: "var(--font-heading)", fontWeight: 600 }}
             >
               ДИКАЯ
               <br />
@@ -118,12 +123,12 @@ export function Hero() {
                   className="glass-card rounded-2xl px-4 py-5 sm:px-6"
                 >
                   <stat.icon className={`mx-auto mb-2 h-6 w-6 ${stat.color}`} />
-                  <p className="text-xs font-medium tracking-wide text-white/50 uppercase sm:text-sm">
+                  <p className="text-xs font-medium tracking-wide text-white/50 uppercase sm:text-sm" style={{ fontFamily: "var(--font-body)" }}>
                     {stat.label}
                   </p>
                   <p
-                    className={`mt-1 text-2xl font-bold ${stat.color} sm:text-3xl`}
-                    style={{ fontFamily: "var(--font-heading)" }}
+                    className={`mt-1 text-2xl ${stat.color} sm:text-3xl`}
+                    style={{ fontFamily: "var(--font-heading)", fontWeight: 600 }}
                   >
                     <CountUp target={stat.value} suffix={stat.suffix} />
                   </p>
@@ -139,7 +144,8 @@ export function Hero() {
                 onClick={() => {
                   document.querySelector("#plots")?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="glow-green rounded-2xl bg-forest-400 px-8 py-4 text-base font-bold text-forest-950 transition-all hover:bg-forest-300 hover:shadow-xl hover:shadow-forest-400/20 active:scale-[0.98] sm:text-lg"
+                className="glow-green rounded-2xl bg-forest-400 px-8 py-4 text-base font-semibold text-forest-950 transition-all hover:bg-forest-300 hover:shadow-xl hover:shadow-forest-400/20 active:scale-[0.98] sm:text-lg"
+                style={{ fontFamily: "var(--font-body)" }}
               >
                 Выбрать участок
               </button>
@@ -147,7 +153,8 @@ export function Hero() {
                 onClick={() => {
                   document.querySelector("#contacts")?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="rounded-2xl border-2 border-white/30 bg-white/10 px-8 py-4 text-base font-bold text-white backdrop-blur-sm transition-all hover:border-white/50 hover:bg-white/20 active:scale-[0.98] sm:text-lg"
+                className="rounded-2xl border-2 border-white/30 bg-white/10 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all hover:border-white/50 hover:bg-white/20 active:scale-[0.98] sm:text-lg"
+                style={{ fontFamily: "var(--font-body)" }}
               >
                 Получить консультацию
               </button>
@@ -155,20 +162,26 @@ export function Hero() {
           </ScrollReveal>
         </div>
 
-        {/* Scroll indicator */}
+        {/* Scroll indicator — pulsing chevron, mobile-friendly */}
         <motion.div
           className="absolute bottom-8 left-1/2 -translate-x-1/2"
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          animate={{ y: [0, 10, 0], opacity: [0.6, 1, 0.6] }}
+          transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
         >
-          <div className="flex h-10 w-6 items-start justify-center rounded-full border-2 border-white/30 p-1">
-            <motion.div
-              className="h-2 w-1.5 rounded-full bg-forest-300"
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            />
+          <div className="flex flex-col items-center gap-1">
+            <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-white/40" style={{ fontFamily: "var(--font-body)" }}>
+              Листайте
+            </span>
+            <ChevronDown className="h-5 w-5 text-forest-300/70" />
           </div>
         </motion.div>
+      </div>
+
+      {/* Bottom wave divider */}
+      <div className="wave-divider">
+        <svg viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,0 C200,50 400,10 600,40 C800,70 1000,20 1200,35 L1200,60 L0,60 Z" fill="#faf6f0" />
+        </svg>
       </div>
     </section>
   );
